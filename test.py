@@ -51,4 +51,7 @@ def touch_espresso_2():
 
 relay_init()
 
+
+touch_onoff()
+time.sleep(5)
 GPIO.cleanup()
