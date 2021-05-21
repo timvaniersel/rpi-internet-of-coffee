@@ -11,15 +11,15 @@ GPIO.setwarnings(True) # We are testing right?
 IN1 = 3 #ONOFF
 IN2 = 5 #1xespresso
 IN3 = 7 #2xespresso
-IN4 = 11 #1xCoffee
-IN5 = 13 #2xCoffee
+# IN4 = 11 #1xCoffee
+# IN5 = 13 #2xCoffee
 
 def relay_init():
     GPIO.setup(IN1, GPIO.OUT, initial=GPIO.HIGH)
     GPIO.setup(IN2, GPIO.OUT, initial=GPIO.HIGH)
     GPIO.setup(IN3, GPIO.OUT, initial=GPIO.HIGH)
-    GPIO.setup(IN4, GPIO.OUT, initial=GPIO.HIGH)
-    GPIO.setup(IN5, GPIO.OUT, initial=GPIO.HIGH)
+    # GPIO.setup(IN4, GPIO.OUT, initial=GPIO.HIGH)
+    # GPIO.setup(IN5, GPIO.OUT, initial=GPIO.HIGH)
 
 def touch_button(pin):
     GPIO.output(pin, GPIO.LOW)
@@ -40,15 +40,15 @@ def touch_espresso_2():
     print("virtual touched on espresso 2")
     touch_button(IN3)
 
-def touch_coffee_1():
-    print("virtual touched on coffee")
-    touch_button(IN4)
+# def touch_coffee_1():
+#     print("virtual touched on coffee")
+#     touch_button(IN4)
+#
+# def touch_coffee_2():
+#     print("virtual touched on coffee 2")
+#     touch_button(IN5)
 
-def touch_coffee_2():
-    print("virtual touched on coffee 2")
-    touch_button(IN5)
 
-    
 relay_init()
 
 GPIO.cleanup()
